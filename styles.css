@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+
+:root {
+    --bodyBg--clr: hsla(0, 0%, 12%, 1);
+    --text--clr1: hsla(100, 100%, 100%, 1);
+    --text--clr2: hsla(80, 100%, 95%, 1);
+    --prof--clr: hsla(210, 50%, 60%, 1);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Capriola", sans-serif;
+    font-size: 13px;
+    color: var(--text--clr2);
+}
+
+body {
+    min-height: 100dvh;
+    width: 100%;
+    background: var(--bodyBg--clr);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 345px));
+    place-content: center;
+    padding: 4rem;
+    gap: 1.5rem;
+}
+
+.card--con {
+    position: relative;
+    --cardBg--clr: hsla(0, 0%, 0%, 1);
+    width: 340px;
+    min-height: 500px;
+    /* border: 2px solid red; */
+    background-color: var(--cardBg--clr);
+    padding: 0 0 2rem 0;
+    border-radius: 5px;
+}
+
+.cover--pic {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.cover--pic1 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.cover--pic2 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+}
+
+.cover--pic3 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+}
+
+.profile--wrapper {
+    position: absolute;
+    height: 85px;
+    width: 85px;
+    /* border: 2px solid yellow; */
+    overflow: hidden;
+    border-radius: 100%;
+    top: 145px;
+    left: 22px;
+    box-shadow: 0 0px 50px 0 rgba(0, 0, 0, 1);
+}
+
+.profile--wrapper>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile--wrapper2 {
+    top: 135px;
+}
+.profile--wrapper3 {
+    top: 130px;
+}
+
+.details--con {
+    padding: 1.5rem 2rem;
+}
+
+h2 {
+    color: var(--text--clr1);
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.profession {
+
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: var(--prof--clr);
+    text-transform: capitalize;
+
+}
+
+.para {
+    line-height: 20px;
+}
+
+.ctas--con {
+    width: 100%;
+    padding: 0 2rem;
+    /* border: 2px solid; */
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 0.6rem 2rem;
+    color: var(--prof--clr);
+    border: 2px solid var(--prof--clr);
+}
+
+button:nth-child(2) {
+    display: inline-block;
+    border: 2px solid var(--text--clr2);
+    margin-left: 1rem;
+    color: var(--text--clr2);
+}
